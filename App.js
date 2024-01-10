@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import 'react-native-gesture-handler';
 
-import LoginForm from "./src/components/LoginForm";
+// import NavigationStack from "./src/navigator/NavigationStack";
+// import NavigationTab from "./src/navigator/NavigationTab";
+import NavigationDrawer from "./src/navigator/NavigationDrawer";
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Text>Open up App.js to start working on your app! Kev!</Text>
-			<LoginForm />
-		</View>
+		<NavigationContainer>
+			<NavigationDrawer></NavigationDrawer>
+		</NavigationContainer>
 	);
 }
 
